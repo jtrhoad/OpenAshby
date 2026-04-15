@@ -26,7 +26,14 @@ FIELDS = pd.DataFrame([field("Category", False), field("Type", False), field("Su
                        field("Izod Impact Strength (Ft-lb)", True), field("Izod Impact Strength (N-m)", True),
                        field("Water Quenched?", False), field("Ultimate Shearing Strength (ksi)", True),
                        field("Ultimate Shearing Strength (Mpa)", True), field("Endurance limit (ksi)", True),
-                       field("Endurance limit (MPa)", True)])
+                       field("Endurance limit (MPa)", True),
+                       field("Density (kg/m^3)", True),
+                       field("Young's Modulus (GPa)", True),
+                       field("Thermal Conductivity (W/m-K)", True),
+                       field("Thermal Expansion (10^-6/K)", True),
+                       field("Maximum Service Temperature (C)", True),
+                       field("Thermal Shock Index (K)", True),
+                       field("E*alpha (MPa/K)", True)])
 
 TEXT = ("Category", "Type", "Subcategory", "Sub-Subcategory", "Mechanical Property Data Source(s)", "Name",
         "Treatment or Temper", "Treatment Temperature (F)", "Treatment Temperature (C)",
@@ -38,7 +45,9 @@ TEXT = ("Category", "Type", "Subcategory", "Sub-Subcategory", "Mechanical Proper
         "Reduction in Cross Sectional Area (%)", "Brinell Hardness", "Rockwell Hardness",
         "Izod Impact Stength (Ft-lb)", "Izod Impact Stength (N-m)", "Water Quenched?",
         "Ultimate Shearing Strength (ksi)", "Ultimate Shearing Strength (Mpa)", "Endurance limit (ksi)",
-        "Endurance limit (MPa)")
+        "Endurance limit (MPa)", "Density (kg/m^3)",
+        "Young's Modulus (GPa)", "Thermal Conductivity (W/m-K)", "Thermal Expansion (10^-6/K)",
+        "Maximum Service Temperature (C)", "Thermal Shock Index (K)", "E*alpha (MPa/K)")
 
 CATEGORY = 0
 TYPE = 1
@@ -74,6 +83,13 @@ ULT_SHEAR_PSI = 30
 ULT_SHEAR_MPA = 31
 ENDURANCE_LIMIT_KSI = 32
 ENDURANCE_LIMIT_MPA = 33
+DENSITY_KG_M3 = 34
+YOUNGS_MODULUS_GPA = 35
+THERMAL_CONDUCTIVITY = 36
+THERMAL_EXPANSION = 37
+MAX_SERVICE_TEMP_C = 38
+THERMAL_SHOCK_INDEX = 39
+E_ALPHA = 40
 
 
 def get_text(enum_val):
